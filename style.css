@@ -1,119 +1,135 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    box-sizing: border-box;
-    text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  box-sizing: border-box;
+  text-align: center;
 }
-body{
-    background-color: #B5BEC6;
 
+body {
+  background: linear-gradient(to bottom, #4567b7, #6495ed);
+  perspective: 1000px;
 }
-h1{
-    background-color: #071108;
-    color: #C7DBE6;
-    height: 10vmin;
-    font-size: 3rem;
-    height: 5rem;
-    line-height: 5rem;
-}
-.main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
 
+h1 {
+  background-color: #071108;
+  color: #C7DBE6;
+  font-size: 3rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-.outer{
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateZ(0);
+  transition: transform 0.5s;
+}
+
+.outer {
+  height: 30vmin;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  transform: translateZ(0);
+  transition: transform 0.5s;
+}
+
+.choice {
+  border: 3px solid transparent;
+  background-color: white;
+  height: 20vmin;
+  width: 20vmin;
+  margin-top: 10px;
+  align-self: center;
+  margin: 15px;
+  border-radius: 50%;
+  transform: translateZ(0);
+  transition: transform 0.5s;
+}
+
+.choice:hover {
+  cursor: pointer;
+  transform: scale(1.1) translateZ(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#rock {
+  background-image: url(./images/rock.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#paper {
+  background-image: url(./images/paper.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#scissor {
+  background-image: url(./images/scissors.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.scorediv {
+  height: 15vmin;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  transform: translateZ(0);
+  transition: transform 0.5s;
+}
+
+.you {
+  align-self: center;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.scorediv label {
+  font-size: 3rem;
+}
+
+.comp {
+  align-self: center;
+  text-align: center;
+  margin: 15px;
+  font-size: 1.5rem;
+}
+
+.msgBox {
+  background-color: #364652;
+  color: #C7DBE6;
+  display: inline;
+  line-height: 10vmin;
+  align-self: center;
+  text-align: center;
+  padding: 0 15px 0 15px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  transform: translateZ(0);
+  transition: transform 0.5s;
+}
+
+@media (max-width: 500px) {
+  nav h1 {
+    font-size: 1.75rem;
+  }
+  .main {
+    border-color: blue;
+    height: 50vh;
+  }
+  .outer {
+    height: 50vmin;
+  }
+  .scorediv {
     height: 30vmin;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;}
-.choice{
-    border: 3px solid transparent;
-    background-color: white;
-    height: 20vmin;
-    width: 20vmin;
-    margin-top: 10px;
-    align-self: center;
-    margin: 15px;
-    border-radius: 50%;}
-.choice:hover{
-    cursor: pointer;
-    height: 25vmin;
-    width: 25vmin;
-    transition: .25s;
-
-}
-#rock{
-    background-image: url(./images/rock.png);
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-position: center;
-    
-}
-#paper{
-    background-image: url(./images/paper.png);
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-position: center;
-
-}
-#scissor{
-    background-image: url(./images/scissors.png);
-    background-size :cover;
-    background-repeat:no-repeat;
-    background-position: center;
-}
-.scorediv{
-    height: 15vmin;
-    display:flex;
-    justify-content: center;
-    margin: 5px;
-
-}
-.you{
-
-    align-self: center;
-    text-align:center;
-    font-size: 1.5rem;
-}
-.scorediv label{
-    font-size: 3rem;
-}
-.comp{
-    align-self: center;
-    text-align:center;
-    margin: 15px;
-    font-size: 1.5rem;
-}
-.msgBox{
-    background-color:#364652 ;
-    color: #C7DBE6;
-    /* height: 10vmin; */
-    display: inline;
-    line-height: 10vmin;
-    align-self: center;
-    text-align: center;
-    padding: 0 15px 0 15px;
-    border-radius: 30px;
-    font-size: 1.5rem;
-;
-}
-@media (max-width:500px){
-    nav h1{
-        font-size: 1.75rem;
-    }
-    .main{
-        border-color: blue;
-        height: 50vh;
-    }
-    .outer{
-        height: 50vmin;
-    }
-    .scorediv{
-        height: 30vmin;
-    }
-
-    
+  }
 }
